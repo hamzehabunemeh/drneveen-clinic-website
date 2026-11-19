@@ -249,7 +249,7 @@ def footer():
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="assets/img/logo-light-520.png" alt="Clinica Neveen" width="520" height="246" loading="lazy">
+        <img src="assets/img/logo-light-520.png" alt="Clinica Neveen" width="520" height="246">
         <p data-ar="عيادة الدكتورة نيفين دبابنة للأمراض الجلدية والتجميل والعلاج بالليزر — حيث يلتقي العلم بالجمال في قلب عمّان.">Dr. Neveen Dababneh's clinic for dermatology, aesthetics and laser therapy — where medical science meets refined beauty, in the heart of Amman.</p>
         <div class="foot-social">{soc}</div>
       </div>
@@ -301,7 +301,7 @@ def page_hero(crumb_en, crumb_ar, eyebrow_en, eyebrow_ar, title_en, title_ar, le
 def picture(name, alt_en, cls='', extra='', pos=None):
     style = f' style="object-position:{pos}"' if pos else ''
     return (f'<picture><source srcset="assets/img/{name}.webp" type="image/webp">'
-            f'<img src="assets/img/{name}.jpg" alt="{A(alt_en)}" loading="lazy"{style} {extra}></picture>')
+            f'<img src="assets/img/{name}.jpg" alt="{A(alt_en)}" decoding="async"{style} {extra}></picture>')
 
 def cta_band():
     return f"""<section class="cta bg-plum grain">
@@ -370,7 +370,7 @@ def page_home():
     </div>
     <div class="hero-visual reveal" style="--rd:.2s">
       <div class="arch-outline" aria-hidden="true"></div>
-      <div class="arch reveal-mask" style="--rd:.35s">{picture('hero-doctor', 'Dr. Neveen Dababneh with a patient during an advanced skin treatment', extra='fetchpriority="high" width="860" height="1024"').replace(' loading="lazy"','')}</div>
+      <div class="arch reveal-mask" style="--rd:.35s">{picture('hero-doctor', 'Dr. Neveen Dababneh with a patient during an advanced skin treatment', extra='fetchpriority="high" width="860" height="1024"').replace('','')}</div>
       <div class="float-card">
         <span class="name" data-ar="د. نيفين دبابنة">Dr. Neveen Dababneh</span>
         <small data-ar="الجلدية والتجميل والليزر">Dermatology & Aesthetics</small>
@@ -779,7 +779,7 @@ def page_contact():
         <p class="muted" data-ar="{A(ADDR_AR)}">{ADDR_EN}</p>
         <a href="{MAPS}" class="btn" target="_blank" rel="noopener" style="margin-top:12px"><span data-ar="احصل على الاتجاهات">Get Directions</span>{ARROW.replace('<svg','<svg class="arrow"')}</a>
       </div>
-      <iframe src="{MAP_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Clinica Neveen location map" allowfullscreen></iframe>
+      <iframe src="{MAP_EMBED}" referrerpolicy="no-referrer-when-downgrade" title="Clinica Neveen location map" allowfullscreen></iframe>
     </div>
   </div>
 </section>
