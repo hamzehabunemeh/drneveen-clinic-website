@@ -726,3 +726,18 @@ html[dir="rtl"] .ba-label.r{right:auto;left:16px}
 }
 .c-card.wa p{color:rgba(251,247,242,.72)}
 .consent input[type=checkbox]{appearance:auto;-webkit-appearance:checkbox;padding:0;width:20px;height:20px;border-radius:4px;background:none;box-shadow:none}
+
+/* Solid, fixed header — no shrinking, no glass, no movement */
+.site-header,.site-header.scrolled{
+  background:var(--cream)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+  box-shadow:0 1px 0 var(--line)!important;transform:none!important;transition:none!important;height:var(--header-h)
+}
+.site-header.scrolled{--header-h:88px}
+.brand img,.scrolled .brand img{height:60px;transition:none}
+.menu-open .site-header{background:var(--plum-800)!important;box-shadow:none!important}
+.cat-nav{top:88px}
+@media (max-width:720px){
+  .site-header.scrolled{--header-h:76px}
+  .brand img,.scrolled .brand img{height:46px}
+  .cat-nav{top:76px}
+}
