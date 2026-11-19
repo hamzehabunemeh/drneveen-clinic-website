@@ -741,3 +741,8 @@ html[dir="rtl"] .ba-label.r{right:auto;left:16px}
   .brand img,.scrolled .brand img{height:46px}
   .cat-nav{top:76px}
 }
+.foot-brand img{width:220px;height:auto}
+img{height:auto}
+img{height:auto}
+.foot-brand img{width:220px;height:auto;aspect-ratio:1523/720;object-fit:contain}
+.brand img{width:auto}

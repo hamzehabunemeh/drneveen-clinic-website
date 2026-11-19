@@ -202,7 +202,7 @@ def head(title_en, title_ar, desc):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=El+Messiri:wght@400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=4">
+<link rel="stylesheet" href="assets/css/style.css?v=5">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"MedicalClinic","name":"Clinica Neveen — Dr. Neveen Dababneh","medicalSpecialty":["Dermatology","PlasticSurgery"],"telephone":"+962798253922","email":"{EMAIL}","address":{{"@type":"PostalAddress","streetAddress":"7th Circle, behind Royal Jordanian building","addressLocality":"Amman","addressCountry":"JO"}},"openingHoursSpecification":[{{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"19:00"}}],"sameAs":["https://www.instagram.com/clinicaneveen/","https://www.facebook.com/clinicaneveen/","https://www.tiktok.com/@clinicaneveen"]}}</script>
 </head>
 """
@@ -280,7 +280,7 @@ def footer():
 <a class="wa-float wa-link" href="https://wa.me/{WA}" target="_blank" rel="noopener" aria-label="WhatsApp" data-ar-aria="تواصل عبر واتساب">{BRAND['whatsapp']}</a>
 <button class="to-top" type="button" aria-label="Back to top" data-ar-aria="العودة للأعلى">{icon('up','1.6')}</button>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="assets/js/main.js?v=4" defer></script>
+<script src="assets/js/main.js?v=5" defer></script>
 </body>
 </html>
 """
@@ -512,7 +512,7 @@ def page_services():
         page_hero('Services', 'الخدمات', 'Our Treatments', 'علاجاتنا', 'Expert care for <em>every</em> skin story', 'رعاية متخصصة <em>لكل</em> بشرة',
                   'From medical dermatology to refined aesthetics and advanced laser therapy — explore treatments designed with precision and care.',
                   'من طب الجلد إلى التجميل الراقي والعلاج بالليزر المتطور، اكتشف علاجات مصمّمة بدقة وعناية.', 'S') + \
-        f'<nav class="cat-nav" data-subnav aria-label="Service categories"><ul>{navs}</ul></nav>' + body + cta_band() + footer()
+        '<div class="svc-wrap">' + f'<nav class="cat-nav" data-subnav aria-label="Service categories"><ul>{navs}</ul></nav>' + body + '</div>' + cta_band() + footer()
 
 def page_before_after():
     cases = [
