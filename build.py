@@ -202,7 +202,7 @@ def head(title_en, title_ar, desc):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=El+Messiri:wght@400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=5">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"MedicalClinic","name":"Clinica Neveen — Dr. Neveen Dababneh","medicalSpecialty":["Dermatology","PlasticSurgery"],"telephone":"+962798253922","email":"{EMAIL}","address":{{"@type":"PostalAddress","streetAddress":"7th Circle, behind Royal Jordanian building","addressLocality":"Amman","addressCountry":"JO"}},"openingHoursSpecification":[{{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"19:00"}}],"sameAs":["https://www.instagram.com/clinicaneveen/","https://www.facebook.com/clinicaneveen/","https://www.tiktok.com/@clinicaneveen"]}}</script>
 </head>
 """
@@ -280,7 +280,7 @@ def footer():
 <a class="wa-float wa-link" href="https://wa.me/{WA}" target="_blank" rel="noopener" aria-label="WhatsApp" data-ar-aria="تواصل عبر واتساب">{BRAND['whatsapp']}</a>
 <button class="to-top" type="button" aria-label="Back to top" data-ar-aria="العودة للأعلى">{icon('up','1.6')}</button>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="assets/js/main.js?v=5" defer></script>
+<script src="assets/js/main.js?v=6" defer></script>
 </body>
 </html>
 """
@@ -408,8 +408,8 @@ def page_home():
 
 <!-- ABOUT -->
 <section class="about section-sm" id="about" style="padding-top:0">
-  <div class="container">
-    <div class="about-media reveal-mask">{picture('office', 'Dr. Neveen Dababneh in her clinic office in Amman', extra='data-parallax="0.08" width="1600" height="900"')}</div>
+  <div class="container about-grid">
+    <div class="about-media reveal-mask">{picture('office', 'Dr. Neveen Dababneh in her clinic office in Amman', extra='width="1600" height="900"')}</div>
     <div class="about-card reveal">
       {T('About the Doctor', 'عن الطبيبة', 'div', 'eyebrow')}
       <h2 class="split-words" data-ar="د. نيفين <em>دبابنة</em>">Dr. Neveen <em>Dababneh</em></h2>
